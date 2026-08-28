@@ -1,0 +1,103 @@
+:root {
+  --sky: #d9dadf;
+  --sky-light: #eceef2;
+  --sky-deep: #aeb0b8;
+  --cream: #06060a;
+  --cream-warm: #0d0d12;
+  --cream-deep: #1e1e26;
+  --ink: #f5f4f0;
+  --ink-soft: #cfced0;
+  --ink-muted: #8a898f;
+  --accent: #eceef2;
+  --accent-hover: #ffffff;
+  --gold: #ffffff;
+  --white: #ffffff;
+  --card: rgba(19, 19, 24, 0.72);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+  cursor: auto;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(55px) scale(0.96);
+  filter: blur(6px);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1), filter 0.9s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Section commons */
+.section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.section-label::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px 2px rgba(255,255,255,0.5);
+  animation: pulseDot 2.2s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.6); }
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 30px rgba(255,255,255,0.12);
+}
+.section-title em {
+  font-style: italic;
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(255,255,255,0.35);
+}
+.section-line {
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent), transparent);
+  margin: 1rem 0 3rem;
+}
+
+@media (max-width: 600px) {
+  body { cursor: auto; }
+}
