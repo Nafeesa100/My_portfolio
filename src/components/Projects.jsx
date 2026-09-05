@@ -7,7 +7,6 @@ const projects = [
     tags: ['MongoDB', 'Express', 'React', 'Node.js'],
     title: 'Inventory Management System',
     desc: 'A full-stack inventory management solution built with the complete MERN stack. Features product tracking, stock management, and real-time updates.',
-    demo: 'https://inventory-management-system-t7l5.vercel.app/',
     github: 'https://github.com/Nafeesa100/INVENTORY_MANAGEMENT_SYSTEM.git',
   },
   {
@@ -27,6 +26,14 @@ const projects = [
     desc: 'A dynamic task management app with create, update, delete, and completion features. Includes filtering logic for completed/pending tasks.',
     demo: 'https://todoapp-five-ashy.vercel.app/',
     github: "https://github.com/Nafeesa100/TODOAPP.git",
+  },
+  {
+    emoji: '🗣️',
+    thumb: 'p2',
+    tags: ['AI', 'LLM', 'Automation'],
+    title: 'Fluent AI',
+    desc: 'An AI-powered application built with LLM integration for natural, fluent conversation and automation workflows.',
+    github: 'https://github.com/Nafeesa100/Fluent_Ai.git',
   },
 ]
 
@@ -58,7 +65,7 @@ export default function Projects() {
       <div className="projects-grid">
         {projects.map((p) => (
           <div className="project-card reveal" key={p.title}>
-            <div className={`project-thumb ${p.thumb}`}>{p.emoji}</div>
+            <div className={`project-icon-badge ${p.thumb}`}>{p.emoji}</div>
             <div className="project-body">
               <div className="project-tags">
                 {p.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
@@ -66,9 +73,11 @@ export default function Projects() {
               <h3 className="project-title">{p.title}</h3>
               <p className="project-desc">{p.desc}</p>
               <div className="project-links">
-                <a href={p.demo} target="_blank" rel="noreferrer" className="project-link">
-                  <ExternalIcon /> Live Demo
-                </a>
+                {p.demo && (
+                  <a href={p.demo} target="_blank" rel="noreferrer" className="project-link">
+                    <ExternalIcon /> Live Demo
+                  </a>
+                )}
                 {p.github && (
                   <a href={p.github} target="_blank" rel="noreferrer" className="project-link">
                     <GithubIcon /> GitHub
