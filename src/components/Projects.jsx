@@ -2,6 +2,14 @@ import './Projects.css'
 
 const projects = [
   {
+    emoji: '🎤',
+    thumb: 'p1',
+    tags: ['Django', 'Python', 'AI/ML', 'NLP'],
+    title: 'AI-Powered Interview Preparation Chatbot',
+    desc: 'A web-based AI platform that helps students and job-seekers prepare for interviews through mock quizzes, resume-based question generation, an AI chat assistant, and real-time confidence detection using ML — with a visual dashboard to track progress.',
+    github: 'https://github.com/Nafeesa100/FYP.git',
+  },
+  {
     emoji: '📦',
     thumb: 'p1',
     tags: ['MongoDB', 'Express', 'React', 'Node.js'],
@@ -15,8 +23,15 @@ const projects = [
     tags: ['Next.js', 'n8n', 'OpenAI', 'Gmail API', 'Vercel'],
     title: 'Mars — AI Chatbot with Email Automation',
     desc: 'An AI-powered chatbot connected to an n8n workflow with conversation memory and Gmail automation. Users can chat naturally and request an email summary of their conversation, sent automatically via Gmail.',
-    demo: 'ai-automation-chatbot-puce.vercel.app',
     github: 'https://github.com/Nafeesa100/AI-automation-chatbot.git',
+  },
+  {
+    emoji: '🗣️',
+    thumb: 'p2',
+    tags: ['AI', 'LLM', 'Automation'],
+    title: 'Fluent AI',
+    desc: 'An AI-powered application built with LLM integration for natural, fluent conversation and automation workflows.',
+    github: 'https://github.com/Nafeesa100/Fluent_Ai.git',
   },
   {
     emoji: '✅',
@@ -26,14 +41,6 @@ const projects = [
     desc: 'A dynamic task management app with create, update, delete, and completion features. Includes filtering logic for completed/pending tasks.',
     demo: 'https://todoapp-five-ashy.vercel.app/',
     github: "https://github.com/Nafeesa100/TODOAPP.git",
-  },
-  {
-    emoji: '🗣️',
-    thumb: 'p2',
-    tags: ['AI', 'LLM', 'Automation'],
-    title: 'Fluent AI',
-    desc: 'An AI-powered application built with LLM integration for natural, fluent conversation and automation workflows.',
-    github: 'https://github.com/Nafeesa100/Fluent_Ai.git',
   },
 ]
 

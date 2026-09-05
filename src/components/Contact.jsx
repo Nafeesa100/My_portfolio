@@ -44,8 +44,8 @@ export default function Contact() {
           <div className="contact-item">
             <div className="contact-icon">💼</div>
             <div className="contact-item-text">
-              <a href="https://www.linkedin.com/in/nafeesa110" target="_blank" rel="noreferrer">
-                linkedin.com/in/nafeesa110
+              <a href="www.linkedin.com/in/nafeesa22111" target="_blank" rel="noreferrer">
+                linkedin.com/in/nafeesa22111
               </a>
             </div>
           </div>
